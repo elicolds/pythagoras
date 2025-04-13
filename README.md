@@ -14,14 +14,13 @@ This assignment is part of the Software III - MRAC01 course.
 ## Table of Contents
 
 - [Overview](#overview)
-- [Folder Structure](#folder-structure)
-- [Installation](#installation)
 - [Usage](#usage)
   - [Generating the Dataset](#generating-the-dataset)
   - [Training the Models](#training-the-models)
   - [Evaluating the Models](#evaluating-the-models)
 - [Results](#results)
-- [License](#license)
+- [Author](#author)
+- [Ackwnowledgment](#acknowledgment)
 
 ## Overview
 
@@ -29,11 +28,11 @@ The goal of this project is to predict the hypotenuse \(c\) of a right-angled tr
 
 ## Usage
 
-    Generate the dataset:
+    Generating the dataset:
 
 python src/generate_dataset.py
 
-Train the models:
+Training the models:
 
     Linear Regression:
 
@@ -43,7 +42,7 @@ MLP Regressor:
 
     python src/mlp_train.py
 
-Evaluate the models:
+Evaluating the models:
 
     Linear Regression:
 
@@ -58,3 +57,13 @@ MLP Regressor:
     Linear Regression: Limited by its linear nature when approximating the non-linear hypotenuse equation.
 
     MLP Regressor: Effectively captures the non-linear relationship with low error.
+    
+## Authors
+
+    Created by elicolds
+
+## Acknowledgment
+
+    Teacher: @Maritaganta
+
+Software III – Robotic Fabrication SeminarMRAC01 – IAAC
