@@ -1,3 +1,4 @@
+## Pythagoras (?)
 This project demonstrates how to approximate the mathematical formula for the hypotenuse of a right-angled triangle:
 
 \[
@@ -26,76 +27,34 @@ This assignment is part of the Software III - MRAC01 course.
 
 The goal of this project is to predict the hypotenuse \(c\) of a right-angled triangle given its sides \(a\) and \(b\). It uses both a traditional Linear Regression approach and an MLP Regressor to illustrate the differences in performance when dealing with non-linear relationships. Visualizations of the predictions versus actual values are generated and saved as images.
 
-## Folder Structure
+## Usage
 
-pythagoras/ ├── data/
-│ └── triangle_dataset.csv # Generated synthetic dataset ├── models/
-│ ├── linear_regression_model.pkl # Trained Linear Regression model │ └── mlp_model.pkl # Trained MLPRegressor model ├── results/
-│ ├── pred_vs_true.png # Visualization for Linear Regression predictions │ └── pred_vs_true_mlp.png # Visualization for MLPRegressor predictions ├── src/
-│ ├── generate_dataset.py # Generates the synthetic dataset │ ├── train.py # Trains the Linear Regression model │ ├── evaluate.py # Evaluates the Linear Regression model │ ├── mlp_train.py # Trains the MLPRegressor model │ └── mlp_evaluate.py # Evaluates the MLPRegressor model ├── requirements.txt # Project dependencies └── README.md # This file
-
-
-## Installation
-
-1. **Clone the Repository (using SSH):**
-
-   ```bash
-   git clone git@github.com:YOUR_USERNAME/pythagoras.git
-   cd pythagoras
-
-    Create and Activate a Virtual Environment:
-
-python3 -m venv venv
-source venv/bin/activate
-
-Install the Dependencies:
-
-    pip install -r requirements.txt
-
-Usage
-Generating the Dataset
-
-Run the following command to generate the synthetic dataset:
+    Generate the dataset:
 
 python src/generate_dataset.py
 
-This script creates a CSV file (triangle_dataset.csv) in the data/ folder.
-Training the Models
-Linear Regression Model
+Train the models:
 
-Train the Linear Regression model with:
+    Linear Regression:
 
 python src/train.py
 
-The trained model is saved as linear_regression_model.pkl in the models/ folder.
-MLP Regressor Model
+MLP Regressor:
 
-Train the MLP Regressor model with:
+    python src/mlp_train.py
 
-python src/mlp_train.py
+Evaluate the models:
 
-The trained model is saved as mlp_model.pkl in the models/ folder.
-Evaluating the Models
-Linear Regression Evaluation
-
-Evaluate the performance of the Linear Regression model by running:
+    Linear Regression:
 
 python src/evaluate.py
 
-This script calculates performance metrics (MSE and R2R2) and generates a plot (pred_vs_true.png) saved in the results/ folder.
-MLP Regressor Evaluation
+MLP Regressor:
 
-Evaluate the MLP Regressor by running:
+        python src/mlp_evaluate.py
 
-python src/mlp_evaluate.py
+## Results
 
-This script generates performance metrics and saves the corresponding plot (pred_vs_true_mlp.png) in the results/ folder.
-Results
+    Linear Regression: Limited by its linear nature when approximating the non-linear hypotenuse equation.
 
-    Linear Regression: Exhibits higher error due to its limitations in modeling the non-linear function c=a2+b2c=a2+b2
-
-    ​.
-
-    MLP Regressor: Accurately captures the non-linear relationship, achieving very low Mean Squared Error and a nearly perfect R2R2 score.
-
-Both visualizations comparing predictions to actual values are available in the results/ folder.
+    MLP Regressor: Effectively captures the non-linear relationship with low error.
